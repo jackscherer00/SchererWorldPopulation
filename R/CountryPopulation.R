@@ -9,10 +9,12 @@
 #' CountryPopulation( 'United States of America' )
 #' @export
 
-library( tidyverse )
-library( stringr )
+
 
 CountryPopulation <- function( country ){
+
+  library( tidyverse )
+  library( stringr )
 
   present <- str_equal( World_Population$CountryName, country )
   if( !any(present) ){
